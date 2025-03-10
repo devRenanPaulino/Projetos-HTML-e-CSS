@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bliss</title>
+</head>
+<body>
+    <div class="main">
+        <div class="nav-bar">
+            <nav>
+                <div class="logo">
+                    <img src="img/logo.png" alt="logo da Bliss">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="active"><a href="#">Inicio</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Serviços</a></li>
+                        <li><a href="#">Sobre</a></li>
+                    </ul>
+                </div>
+                <div class="menu-icon">
+                    <img src="img/menu.png" alt="barra de menu">
+                </div>
+            </nav>
+        </div>
+        <div class="content">
+            <div class="social-icons">
+                <img src="img/instagram.png" alt="logo instagram">
+                <img src="img/facebook.png" alt="logo facebook">
+                <img src="img/twitter.png" alt="logo twitter">
+                <img src="img/youtube.png" alt="logo youtube">
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Buscar">
+                <img src="img/search.png" alt="pesquisar">
+            </div>
+        </div>
+
+        <img src="img/cloud.png" alt="desenho de nuvens" id="clouods">
+        <img src="img/plane.png" alt="imagem de avião" id="airplane">
+        <div id="hotairballon">
+            <img src="img/balloon.png" alt="imagem balao" class="balloon1">
+            <img src="img/balloon.png" alt="imagem balao" class="balloon2">
+            <img src="img/balloon.png" alt="imagem balao" class="balloon3">
+        </div>
+
+        <img src="img/pause.png" alt="botão de pausar" id="myImg">
+
+    </div>
+
+    <script>
+        var myImg = document.getElementById("myImg");
+    
+        myImg.onclick = function() {
+            var clouds = document.getElementById("clouods");
+            var airplane = document.getElementById("airplane");
+            var hotairballon = document.getElementById("hotairballon");
+    
+            if (clouds.style.animationPlayState === "paused") {
+                clouds.style.animationPlayState = "running";
+                airplane.style.animationPlayState = "running";
+                hotairballon.style.animationPlayState = "running";
+                myImg.src = './img/pause.png';
+            } else {
+                clouds.style.animationPlayState = "paused";
+                airplane.style.animationPlayState = "paused";
+                hotairballon.style.animationPlayState = "paused";
+                myImg.src = './img/play.png';
+            }
+        }
+    </script>
+
+</body>
+</html>

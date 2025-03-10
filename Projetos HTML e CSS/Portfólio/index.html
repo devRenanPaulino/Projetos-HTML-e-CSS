@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfólio</title>
+</head>
+<body>
+    <div class="particulas"></div>
+
+    <nav class="navegacao">
+        <ul class="menu">
+            <li><a href="#inicio" class="menu-link">Início</a></li>
+            <li><a href="#sobre" class="menu-link">Sobre Mim</a></li>
+            <li><a href="#projetos" class="menu-link">Projetos</a></li>
+            <li><a href="#contatos" class="menu-link">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main id="inicio" class="cabecalho">
+        <img src="img/minha foto nova.jpg" alt="Foto do Renan da Silva Paulino" class="foto-perfil">
+        <h1>Renan da Silva Paulino</h1>
+        <p class="area">Desenvolvedor Web</p>
+    </main>
+
+    <section id="sobre" class="sobre">
+        <h2 class="sobre-titulo">Sobre Mim</h2>
+        <div class="sobre-caixa">
+            <p class= "sobre-paragrafo">
+                Olá! Sou um estudante de desenvolvimento web pelo instituto Proa, apaixonado por programação e criar experiências web únicas e memoráveis. Crio design modernos para sites que não só funcionam perfeitamente, como impressionam visualmente. 
+            </p>
+        </div>
+    </section>
+
+    <section id="projetos" class="projetos">
+        <h2 class="projetos-titulo">Meus Projetos</h2>
+        <div class="projetos-caixa">
+
+            <div class="projetos-card">
+                <img src="img/BODHI.png" alt="Lading Page BODHI" class="projetos-imagem">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Plataforma Bodhi - Arte e Cultura</h3>
+                    <p class="paragrafo-projetos">Este design apresenta uma interface elegante e inspiradora e animações suaves, como seções dedicadas a exposições, reflexões e inspirações.</p>
+                </div>
+            </div>
+
+            <div class="projetos-card">
+                <img src="img/TELA DE LOGIN.png" alt="Tela de Login" class="projetos-imagem">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Tela de Login e Cadastro</h3>
+                    <p class="paragrafo-projetos"> Tela de login e cadastro desenvolvida para oferecer uma experiência de usuário simplificada e segura. O design inclui etapas claras para a criação de uma nova conta.</p>
+                </div>
+            </div>
+            
+            <div class="projetos-card">
+                <img src="img/Redesign Casas Bahia.png" alt="Lading Page BODHI" class="projetos-imagem">
+                <div class="caixa-texto-projetos">
+                    <h3 class="info-projetos">Redesign - Casas Bahia</h3>
+                    <p class="paragrafo-projetos"> Este projeto feito no figma apresenta um redesign da interface da Casas Bahia, focando em uma experiência de usuário mais intuitiva e visualmente atraente. O design inclui um layout limpo e moderno.<p>
+                </div>
+            </div>
+
+        </div>
+
+            <section id="contatos" class="contatos">
+                <h2 class="contatos-titulo">Entre em Contato</h2>
+                <form class="formulario-contato" id="formulario" onsubmit="enviarwhats(event)">
+                <div class="grupo-form">
+                    <input placeholder="Nome" class="campo-form" id="nome">
+                </div>
+                <div class="grupo-form">
+                    <textarea placeholder="Digite Sua Mensagem" class="campo-form" rows="4" id="mensagem"></textarea>
+                </div>
+
+                <button type="submit" class="botao-form">Enviar Whatsapp</button>
+                </form>
+            </section>
+            
+    </section>
+
+    <script>
+
+        function enviarwhats(event) {
+            event.preventDefault()
+
+            const nome = document.getElementById('nome').value;
+            const mensagem = document.getElementById('mensagem').value;
+            const telefone = '5511942417225'
+
+            const text = `Olá! me chamo ${nome}, ${mensagem}`
+            const msgFormatada = encodeURIComponent
+
+            const url = `https://wa.me/${telefone}/?text=${msgFormatada}`
+
+            window.open(url, '_blank')
+        }
+
+    </script>
+
+</body>
+</html>

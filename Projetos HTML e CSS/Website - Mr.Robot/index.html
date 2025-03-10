@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Website Mr.Robot</title>
+</head>
+<body>
+    <div class="banner">
+        <div class="left-box">
+            <div class="wrapper">
+                <img src="img/image.png" alt="logo" class="logo">
+
+                <div class="search-box">
+                    <img src="img/search.png" alt="">
+                    <input type="text" placeholder="Procurar">
+                </div>
+
+                <div class="vertical-line"></div>
+
+                <ul>
+                    <li><a href="#">Produçaõ</a></li>
+                    <li><a href="#">Facilidade</a></li>
+                    <li><a href="#">Mecanismos</a></li>
+                    <li><a href="#">Nossa Equipe</a></li>
+                    <li><a href="#">Nossas Ideias</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="rigth-box">
+            <nav>
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">SOBRE NÓS</a></li>
+                    <li><a href="">TECNOLOGIA</a></li>
+                    <li><a href="">PRODUTOS</a></li>
+                </ul>
+            </nav>
+
+            <h2>A PRÓXIMA <br>GERAÇÃO</h2>
+
+            <div class="robot">
+                <img src="img/robo.png" alt="Imagem de um Robô">
+                <H1>IROBOT</H1>
+                <div class="features">
+                    <div>
+                        <small>Assista Agora</small>
+                        <img src="img/play.png" alt="botão de play">
+                    </div>
+
+                    <div>
+                        <small>Fabricação</small>
+                        <img src="img/settings.png" alt="botão de ferramentas">
+                    </div>
+
+                    <div>
+                        <small>Download PDF</small>
+                        <img src="img/download.png" alt="botão de download">
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="circle"></div>
+
+            <div class="pagination">
+                <ul>
+                    <li class="active"><a href="#">01</a></li>
+                    <li><a href="#">02</a></li>
+                    <li><a href="#">03</a></li>
+                    <li><a href="#">04</a></li>
+                    <li><a href="#">05</a></li>
+                </ul>
+            </div>
+            <img src="img/volume.png" alt="" class="volume">
+        </div>
+    </div>
+
+    <div class="smallCursor"></div>
+    <div class="largeCursor"></div>
+
+    <script>
+
+        var smallCursor = document.querySelector(".smallCursor");
+        var largeCursor = document.querySelector(".largeCursor");
+
+        document.onmousemove = function(e){
+            smallCursor.style.left = (e.pageX - 5) + "px";
+            smallCursor.style.top = (e.pageY - 5) + "px";
+
+            smallCursor.style.display = "block";
+
+            largeCursor.style.left = (e.pageX - 22) + "px";
+            largeCursor.style.top = (e.pageY - 22) + "px";
+
+            largeCursor.style.display = "block";
+        }
+
+    </script>
+
+</body>
+</html>
